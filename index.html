@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        div#gameboard {
+         display:inline-grid;
+        }
+
+        div#gameboard > button {
+            width: 24px;
+            height: 24px;
+            background-image: url(./images/closed.svg);
+            background-size: cover ;
+            cursor:pointer
+        }
+
+        div#gameboard > button.open.mark0 {
+            background-image: url(./images/type0.svg);
+        }
+        div#gameboard > button.open.mark1 {
+            background-image: url(./images/type1.svg);
+        }
+        div#gameboard > button.open.mark2 {
+            background-image: url(./images/type2.svg);
+        }
+        div#gameboard > button.open.mark3 {
+            background-image: url(./images/type3.svg);
+        }
+        div#gameboard > button.open.mark4 {
+            background-image: url(./images/type4.svg);
+        }
+        div#gameboard > button.open.mark5 {
+            background-image: url(./images/type5.svg);
+        }
+        div#gameboard > button.open.mark6 {
+            background-image: url(./images/type6.svg);
+        }
+        div#gameboard > button.open.mark7 {
+            background-image: url(./images/type7.svg);
+        }
+        div#gameboard > button.open.mark8 {
+            background-image: url(./images/type8.svg);
+        }
+        div#gameboard > button.open.bomb {
+            background-image: url(./images/mine.svg);
+        }
+        div#gameboard > button.open.bomb.clicked {
+            background-image: url(./images/mine_red.svg);
+        }
+
+        div#gameboard > button.closed.flag {
+            background-image: url(./images/flag.svg);
+        }
+        div#gameboard > button.closed.wrong_flag {
+            background-image: url(./images/mine_wrong.svg);
+        }
+        div#gameboard > button.closed.pressed {
+            background-image: url(./images/pressed.svg);
+        }
+
+        #top {
+            color: white
+        }
+
+        .red {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="top">
+        Level: <select id="selLevel">
+            <option value="BEGINNER">BEGINNER</option>
+            <option value="INTERMEDIATE">INTERMEDIATE</option>
+            <option value="EXPERT">EXPERT</option>
+        </select>
+        <button id="btnReset">Reset</button><br>
+        Bombs remaining: <span id="txtBombRemaining" class="red">000</span><br>
+        TIme spent: <span id="txtTimeSpent" class="red">000</span>
+        </div>
+        <div id="gameboard">
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/minesweeper.js"></script>
+</body>
+    
+</html>
